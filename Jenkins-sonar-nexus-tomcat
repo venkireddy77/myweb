@@ -1,4 +1,4 @@
-pipeline{
+pipeline{https://github.com/venkireddy77/myweb/blob/master/Jenkins-sonar-nexus-tomcat
     agent any
      tools {
         maven 'Maven-3.6.1'
