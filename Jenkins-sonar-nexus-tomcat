@@ -42,11 +42,11 @@ pipeline{https://github.com/venkireddy77/myweb/blob/master/Jenkins-sonar-nexus-t
             steps{
                 sshagent(['tomcat-new']) {
                 sh """
-                    scp -o StrictHostKeyChecking=no target/myweb-8.2.0.war  ec2-user@172.31.29.39:/home/ec2-user/apache-tomcat-9.0.63/webapps/
+                    scp -o StrictHostKeyChecking=no target/myweb-8.2.0.war  ec2-user@172.31.29.39:/home/ec2-user/apache-tomcat-9.0.64/webapps/
                     
-                    ssh ec2-user@172.31.29.39/home/ec2-user/apache-tomcat-9.0.63/bin/shutdown.sh
+                    ssh ec2-user@172.31.29.39/home/ec2-user/apache-tomcat-9.0.64/bin/shutdown.sh
                     
-                    ssh ec2-user@172.31.29.39/home/ec2-user/apache-tomcat-9.0.63/bin/startup.sh
+                    ssh ec2-user@172.31.29.39/home/ec2-user/apache-tomcat-9.0.64/bin/startup.sh
                 
                 """
             }
