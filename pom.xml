@@ -7,6 +7,18 @@
 	<version>8.2.0</version>
 	<name>Java Home myweb</name>
 	<url>http://maven.apache.org</url>
+
+
+	<build>
+    <plugins>
+        <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.10.0.2594</version> <!-- Update to the latest version -->
+        </plugin>
+    </plugins>
+</build>
+
 	
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
