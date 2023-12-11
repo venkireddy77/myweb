@@ -9,17 +9,6 @@
 	<url>http://maven.apache.org</url>
 
 
-	<build>
-    <plugins>
-        <plugin>
-            <groupId>org.sonarsource.scanner.maven</groupId>
-            <artifactId>sonar-maven-plugin</artifactId>
-            <version>latest_version</version>
-        </plugin>
-    </plugins>
-</build>
-
-	
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
 		<sonar.host.url>http://172.31.45.5:9000/</sonar.host.url>
