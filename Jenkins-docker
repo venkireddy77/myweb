@@ -40,17 +40,17 @@ pipeline{
             }
         stage('Build Docker Image'){
             steps{
-                 sh 'docker build -t venkireddy7117/dev .'
+                 sh 'docker build -t venkireddy779651/springboot .'
                  sh 'docker build -t tomcat:${BUILD_NUMBER} .'
-                 sh 'docker run -itd --name venkireddy7117 -p 2900:8080 tomcat:${BUILD_NUMBER}'
+                 sh 'docker run -itd --name venkireddy779651 -p 2900:8080 tomcat:${BUILD_NUMBER}'
              }
          }
         stage('Push Docker Image'){
              steps{
                   withCredentials([string(credentialsId: 'DOCKER_HUB_CREDENTIAL', variable: 'DOCKER_HUB_CREDENTIAL')]) {
-                      sh "docker login -u venkireddy7117 -p ${DOCKER_HUB_CREDENTIAL}"
+                      sh "docker login -u venkireddy779651 -p ${DOCKER_HUB_CREDENTIAL}"
             }
-            sh 'docker push venkireddy7117/dev'
+            sh 'docker push venkireddy779651/springboot'
         }
       }
         
